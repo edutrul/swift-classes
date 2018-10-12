@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example_uis_layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lima_b" translatesAutoresizingMaskIntoConstraints="NO" id="gfW-Fe-A5i">
+                                <rect key="frame" x="0.0" y="132" width="414" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="6TO-1V-uoL"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1ib-Pv-ARV">
+                                <rect key="frame" x="12" y="480" width="371" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="A30-r2-MKX"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullarem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAg-PQ-RXS">
+                                <rect key="frame" x="30" y="686" width="64" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MVl-3H-zwD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="VoN-v9-tPC"/>
+                                </constraints>
+                                <state key="normal" title="Me gusta"/>
+                                <connections>
+                                    <action selector="like:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fR-Le-A6M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpV-Qg-pha">
+                                <rect key="frame" x="12" y="411" width="382" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3m5-Xt-kgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPv-dp-xEg">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="Z0v-Sm-g7e"/>
+                                    <constraint firstAttribute="height" constant="44" id="sbG-fr-ofN"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="9gR-uK-4Ir"/>
+                                </items>
+                            </toolbar>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-xz-Abh">
+                                <rect key="frame" x="337" y="685" width="49" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="47" id="1eD-1d-PWn"/>
+                                    <constraint firstAttribute="height" constant="31" id="kOc-lA-yRf"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="filterDescription:" destination="BYZ-38-t0r" eventType="valueChanged" id="NCz-9X-Qmz"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-Fn-FVX">
+                                <rect key="frame" x="20" y="96" width="354" height="29"/>
+                                <segments>
+                                    <segment title="Lima"/>
+                                    <segment title="Arequipa"/>
+                                    <segment title="Trujillo"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeContent:" destination="BYZ-38-t0r" eventType="valueChanged" id="LIH-WD-bPh"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gfW-Fe-A5i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="132" id="31N-Bi-DpV"/>
+                            <constraint firstItem="1WW-Fn-FVX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4D4-QB-3gl"/>
+                            <constraint firstItem="WpV-Qg-pha" firstAttribute="top" secondItem="gfW-Fe-A5i" secondAttribute="bottom" constant="8" id="4lf-5z-GBm"/>
+                            <constraint firstItem="1ib-Pv-ARV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="6w3-Wx-M6v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WpV-Qg-pha" secondAttribute="trailing" constant="20" id="B6o-sy-MY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1WW-Fn-FVX" secondAttribute="trailing" constant="40" id="DUa-2z-D7T"/>
+                            <constraint firstItem="FPv-dp-xEg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FTk-hh-WY5"/>
+                            <constraint firstItem="QAg-PQ-RXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HFt-JL-8Kf"/>
+                            <constraint firstItem="gfW-Fe-A5i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hwj-a0-WkN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QAg-PQ-RXS" secondAttribute="bottom" constant="20" id="JYO-8o-tJ4"/>
+                            <constraint firstItem="gfW-Fe-A5i" firstAttribute="top" secondItem="1WW-Fn-FVX" secondAttribute="bottom" constant="8" id="MmB-Oc-NFa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ib-Pv-ARV" secondAttribute="trailing" constant="31" id="Ndc-br-SyK"/>
+                            <constraint firstItem="1ib-Pv-ARV" firstAttribute="top" secondItem="WpV-Qg-pha" secondAttribute="bottom" constant="48" id="XmL-9j-nGj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FPv-dp-xEg" secondAttribute="trailing" id="c3D-ju-wjX"/>
+                            <constraint firstItem="WpV-Qg-pha" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="dX4-cp-ihj"/>
+                            <constraint firstItem="FPv-dp-xEg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="frY-NI-RGW"/>
+                            <constraint firstItem="gfW-Fe-A5i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="h1m-H7-rgR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fS4-xz-Abh" secondAttribute="trailing" constant="30" id="l34-bU-4ok"/>
+                            <constraint firstItem="WpV-Qg-pha" firstAttribute="top" secondItem="gfW-Fe-A5i" secondAttribute="bottom" constant="8" id="qsp-Oc-mee"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fS4-xz-Abh" secondAttribute="bottom" constant="20" id="tdO-6t-Afr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="desc" destination="1ib-Pv-ARV" id="5gJ-wt-Tob"/>
+                        <outlet property="label" destination="WpV-Qg-pha" id="3Vi-fY-vcw"/>
+                        <outlet property="mySegment" destination="1WW-Fn-FVX" id="oEx-w2-1eJ"/>
+                        <outlet property="mySwitch" destination="fS4-xz-Abh" id="yv9-uC-WT6"/>
+                        <outlet property="photo" destination="gfW-Fe-A5i" id="Ddi-lZ-Vrr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="101.90217391304348"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lima_b" width="1400" height="480"/>
+    </resources>
+</document>
