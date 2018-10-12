@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var modal1: UIView!
+    
     @IBOutlet weak var mySegment: UISegmentedControl!
 
     @IBOutlet weak var photo: UIImageView!
@@ -19,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mySwitch: UISwitch!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,6 +64,17 @@ class ViewController: UIViewController {
         }
     }
     
-
+    
+    @IBAction func showModal(_ sender: Any) {
+        let x = UIScreen.main.bounds.width / 2
+        let y = UIScreen.main.bounds.height / 2
+        modal1.layer.position = CGPoint(x: x, y: y)
+        self.view.addSubview(modal1)
+    }
+    
+    
+    @IBAction func closeModal(_ sender: Any) {
+        modal1.removeFromSuperview()
+    }
 }
 

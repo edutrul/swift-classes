@@ -23,6 +23,17 @@
                                     <constraint firstAttribute="height" constant="271" id="6TO-1V-uoL"/>
                                 </constraints>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-Fn-FVX">
+                                <rect key="frame" x="20" y="96" width="354" height="29"/>
+                                <segments>
+                                    <segment title="Lima"/>
+                                    <segment title="Arequipa"/>
+                                    <segment title="Trujillo"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeContent:" destination="BYZ-38-t0r" eventType="valueChanged" id="LIH-WD-bPh"/>
+                                </connections>
+                            </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1ib-Pv-ARV">
                                 <rect key="frame" x="12" y="480" width="371" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,7 +71,11 @@
                                     <constraint firstAttribute="height" constant="44" id="sbG-fr-ofN"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="9gR-uK-4Ir"/>
+                                    <barButtonItem title="Item" id="9gR-uK-4Ir">
+                                        <connections>
+                                            <action selector="showModal:" destination="BYZ-38-t0r" id="AHC-fx-kqg"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-xz-Abh">
@@ -73,17 +88,6 @@
                                     <action selector="filterDescription:" destination="BYZ-38-t0r" eventType="valueChanged" id="NCz-9X-Qmz"/>
                                 </connections>
                             </switch>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-Fn-FVX">
-                                <rect key="frame" x="20" y="96" width="354" height="29"/>
-                                <segments>
-                                    <segment title="Lima"/>
-                                    <segment title="Arequipa"/>
-                                    <segment title="Trujillo"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeContent:" destination="BYZ-38-t0r" eventType="valueChanged" id="LIH-WD-bPh"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -113,12 +117,36 @@
                     <connections>
                         <outlet property="desc" destination="1ib-Pv-ARV" id="5gJ-wt-Tob"/>
                         <outlet property="label" destination="WpV-Qg-pha" id="3Vi-fY-vcw"/>
+                        <outlet property="modal1" destination="eFM-dV-x4K" id="WIG-ca-e8b"/>
                         <outlet property="mySegment" destination="1WW-Fn-FVX" id="oEx-w2-1eJ"/>
                         <outlet property="mySwitch" destination="fS4-xz-Abh" id="yv9-uC-WT6"/>
                         <outlet property="photo" destination="gfW-Fe-A5i" id="Ddi-lZ-Vrr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="eFM-dV-x4K">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-ZN-OY5">
+                            <rect key="frame" x="-40" y="-44" width="320" height="216"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </pickerView>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4E-bN-sVK">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Item" id="EWN-sm-x4V">
+                                    <connections>
+                                        <action selector="closeModal:" destination="BYZ-38-t0r" id="0mJ-Qk-YEt"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="dfj-KF-JMY"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="136.23188405797103" y="101.90217391304348"/>
         </scene>
