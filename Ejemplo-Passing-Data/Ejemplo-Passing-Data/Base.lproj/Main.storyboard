@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="959.20000000000005" y="104.7976011994003"/>
         </scene>
-        <!--Destinity View Controller-->
+        <!--Amigos-->
         <scene sceneID="wtL-7m-3Eu">
             <objects>
                 <viewController id="iwB-MO-9Sc" customClass="DestinityViewController" customModule="Ejemplo_Passing_Data" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,6 +95,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iBX-IB-iew"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Amigos" id="Z0e-eS-Hw4">
+                        <barButtonItem key="rightBarButtonItem" title="Editar" id="jqh-Fq-z9x">
+                            <connections>
+                                <segue destination="zHC-Od-pEq" kind="show" id="ErU-sa-gT4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="txtOutput" destination="b3F-yY-X3Q" id="UH5-n2-MHe"/>
                     </connections>
@@ -142,6 +149,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tqk-Ow-5Ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="104.7976011994003"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zut-0d-zQk">
+            <objects>
+                <viewController id="zHC-Od-pEq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nOO-F8-xh4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="m9y-nC-E5l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flD-Ai-ys1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2735" y="92"/>
         </scene>
     </scenes>
 </document>
